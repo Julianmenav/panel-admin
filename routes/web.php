@@ -17,4 +17,14 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/', [App\Http\Controllers\WelcomeController::class, 'index'])->name('welcome');
+
+Route::middleware(['auth','admin'])->group(function () {
+    
+    Route::get('/admin', [App\Http\Controllers\AdminHomeController::class, 'index'])->name('admin');
+    Route::get('/admin/users', [App\Http\Controllers\AdminUsersController::class, 'index'])->name('users');
+    Route::get('/admin/events', [App\Http\Controllers\AdminCalendarEventsController::class, 'index'])->name('events');
+
+
+});

@@ -253,7 +253,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => '/',
+    'dashboard_url' => '/admin',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
@@ -292,11 +292,6 @@ return [
     'menu' => [
         // Navbar items:
         [
-            'type'         => 'navbar-search',
-            'text'         => 'search',
-            'topnav_right' => true,
-        ],
-        [
             'type'         => 'fullscreen-widget',
             'topnav_right' => true,
         ],
@@ -306,27 +301,27 @@ return [
         [
             'text'    => 'Inicio',
             'icon'    => 'fas fa-home',
-            'url'     => '/'
+            'url'     => '/admin'
         ],
         [
             'text'    => 'Administracion',
-            'icon'    => '',
+            'icon'    => 'fas fa-fw fa-user',
             'submenu' => [
                 [
                     'text' => 'Usuarios',
                     'url'  => 'admin/users',
-                    'icon' => 'fas fa-fw fa-user'
+                    'icon' => ''
                 ],
             ],
         ],
         [
             'text'    => 'Calendario',
-            'icon'    => '',
+            'icon' => 'fas fa-calendar',
             'submenu' => [
                 [
                     'text' => 'Tipo de Eventos',
                     'url'  => 'admin/events',
-                    'icon' => 'fas fa-calendar'
+                    'icon' => ''
                 ],
             ],
         ],
