@@ -16,8 +16,8 @@ class EventType extends Model
         'textColor'
     ];
 
-    public function event() {
-        return $this->hasMany(EventTypes::class);
+    public function events() {
+        return $this->hasMany(Event::class, 'event_type_id');
     }
 
     public function id()

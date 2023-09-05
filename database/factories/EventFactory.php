@@ -27,7 +27,7 @@ class EventFactory extends Factory
             'start_datetime' => $random_date,
             'end_datetime' => $random_date->add($random_duration),
             'title' => fake()->sentence(4),
-            'eventType_id' => EventType::all()->random()->id()
+            'event_type_id' => EventType::all()->random()->id()
 
         ];
     }

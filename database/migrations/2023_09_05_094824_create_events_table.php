@@ -18,8 +18,7 @@ return new class extends Migration
             $table->dateTime('start_datetime');
             $table->dateTime('end_datetime');
             $table->string('title');
-            $table->unsignedBigInteger('eventType_id');
-            $table->foreign('eventType_id')->references('id')->on('event_types');
+            $table->foreignId('event_type_id')->constrained()->onDelete("cascade");
             $table->timestamps();
         });
     }

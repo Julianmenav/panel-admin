@@ -13,7 +13,7 @@ class Event extends Model
         'start_datetime',
         'end_datetime',
         'title',
-        'eventType_id'
+        'event_type_id'
     ];
 
     public function eventType() {
