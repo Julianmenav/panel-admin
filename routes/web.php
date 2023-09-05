@@ -34,13 +34,10 @@ Route::middleware(['auth','admin'])->group(function () {
     Route::delete('/admin/users', [App\Http\Controllers\AdminUsersController::class, 'delete'])->name('users.delete');
 
 
-
-
-
-
-
     Route::get('/admin/events', [App\Http\Controllers\AdminEventTypesController::class, 'index'])->name('eventTypes');
-
-
+    Route::post('/admin/events', [App\Http\Controllers\AdminEventTypesController::class, 'create'])->name('eventTypes.create');
+    Route::get('/admin/events/edit', [App\Http\Controllers\AdminEventTypesController::class, 'edit'])->name('eventTypes.edit');
+    Route::put('/admin/events', [App\Http\Controllers\AdminEventTypesController::class, 'update'])->name('eventTypes.update');
+    Route::delete('/admin/events', [App\Http\Controllers\AdminEventTypesController::class, 'delete'])->name('eventTypes.delete');
 
 });

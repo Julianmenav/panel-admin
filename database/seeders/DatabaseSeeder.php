@@ -39,13 +39,13 @@ class DatabaseSeeder extends Seeder
             'name' => 'Por Defecto',
             'backgroundColor' => '#4472CF',
             'borderColor' => '#93FF43',
-            'textColor' => '#FFF',
+            'textColor' => '#FFFFFF',
         ]);
         EventType::create([
             'name' => 'Reunion',
             'backgroundColor' => '#B053AB',
             'borderColor' => '#FF8B00',
-            'textColor' => '#FFF',
+            'textColor' => '#FFFFFF',
         ]);
         EventType::create([
             'name' => 'Cumpleaños',
