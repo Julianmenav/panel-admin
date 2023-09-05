@@ -24,8 +24,7 @@ Route::middleware(['auth','admin'])->group(function () {
     
     Route::get('/admin', [App\Http\Controllers\AdminHomeController::class, 'index'])->name('admin');
     Route::get('/admin/users', [App\Http\Controllers\AdminUsersController::class, 'index'])->name('users');
-    // Cambiar por AdminEventTypesController name('types o eventTypes')
-    Route::get('/admin/events', [App\Http\Controllers\AdminCalendarEventsController::class, 'index'])->name('events');
+    Route::get('/admin/events', [App\Http\Controllers\AdminEventTypesController::class, 'index'])->name('eventTypes');
 
     Route::post('/admin',  [App\Http\Controllers\AdminHomeController::class, 'create'])->name('event.create');
     Route::put('/admin',  [App\Http\Controllers\AdminHomeController::class, 'update'])->name('event.update');

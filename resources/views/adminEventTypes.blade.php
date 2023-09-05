@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Usearios')
+@section('title', 'Tipo de Eventos')
 
 @section('content')
 

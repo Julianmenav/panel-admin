@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class AdminCalendarEventsController extends Controller
+class AdminEventTypesController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -20,6 +20,6 @@ class AdminCalendarEventsController extends Controller
      */
     public function index()
     {
-        return view('adminCalendarEvents');
+        return view('adminEventTypes');
     }
 }
