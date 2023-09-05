@@ -5,6 +5,8 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use \App\Models\User;
+use \App\Models\Event;
+use \App\Models\EventType;
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,12 +17,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        // Seed users table
         User::create([
             'name' => 'admin',
             'email' => 'admin@admin.com',
@@ -35,5 +32,29 @@ class DatabaseSeeder extends Seeder
             'role' => 'user'
         
         ]);
+        User::factory(15)->create();
+
+        // Seed EventTypes table
+        EventType::create([
+            'name' => 'Por Defecto',
+            'backgroundColor' => '#4472CF',
+            'borderColor' => '#FFF',
+            'textColor' => '#000',
+        ]);
+        EventType::create([
+            'name' => 'Reunion',
+            'backgroundColor' => '#B053AB',
+            'borderColor' => '#000',
+            'textColor' => '#000',
+        ]);
+        EventType::create([
+            'name' => 'Cumpleaños',
+            'backgroundColor' => '#D0ECE7',
+            'borderColor' => '#FFF',
+            'textColor' => '#FFF',
+        ]);
+
+        // Seed Events(calendar) table
+        Event::factory(10)->create();
     }
 }
