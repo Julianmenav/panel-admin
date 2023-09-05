@@ -28,6 +28,8 @@ Route::middleware(['auth','admin'])->group(function () {
     Route::get('/admin/events', [App\Http\Controllers\AdminCalendarEventsController::class, 'index'])->name('events');
 
     Route::post('/admin',  [App\Http\Controllers\AdminHomeController::class, 'create'])->name('event.create');
+    Route::put('/admin',  [App\Http\Controllers\AdminHomeController::class, 'update'])->name('event.update');
+    Route::delete('/admin',  [App\Http\Controllers\AdminHomeController::class, 'delete'])->name('event.delete');
 
 
 });

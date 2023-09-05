@@ -45,4 +45,19 @@ class AdminHomeController extends Controller
         return redirect()->back();
     }
 
+    public function update(Request $request)
+    {
+        $event = Event::find($request->id);
+        $event->title = $request->title;
+        $event->event_type_id = intval($request->event_type_id);
+
+        $event->save();
+    }   
+
+
+    public function delete(Request $request)
+    {
+        $event = Event::find($request->id);
+        $event->delete();
+    }
 }
