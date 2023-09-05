@@ -38,23 +38,23 @@ class DatabaseSeeder extends Seeder
         EventType::create([
             'name' => 'Por Defecto',
             'backgroundColor' => '#4472CF',
-            'borderColor' => '#FFF',
+            'borderColor' => '#93FF43',
             'textColor' => '#FFF',
         ]);
         EventType::create([
             'name' => 'Reunion',
             'backgroundColor' => '#B053AB',
-            'borderColor' => '#000',
+            'borderColor' => '#FF8B00',
             'textColor' => '#FFF',
         ]);
         EventType::create([
             'name' => 'Cumpleaños',
             'backgroundColor' => '#D0ECE7',
-            'borderColor' => '#FFF',
+            'borderColor' => '#E75DFF',
             'textColor' => '#242424',
         ]);
 
         // Seed Events(calendar) table
-        Event::factory(35)->create();
+        Event::factory(15)->create();
     }
 }

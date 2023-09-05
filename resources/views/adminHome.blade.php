@@ -19,8 +19,6 @@
                 @endforeach
             ];
             
-
-
             let calendarEl = document.getElementById('calendar');
 
             let calendar = new FullCalendar.Calendar(calendarEl, {
@@ -30,6 +28,7 @@
                 allDaySlot: false,
                 slotDuration: '00:30:00',
                 slotMinTime: '07:00:00', 
+                slotMaxTime: '20:00:00',
                 slotLabelInterval: '00:30:00',
                 headerToolbar:{
                     left: "prev,next today",
@@ -52,7 +51,7 @@
         });
 
     </script>
-    <div id='calendar' style="padding: 20px"></div>
+    <div id='calendar' style=""></div>
 @endsection
 @section('footer')
     @include('layouts.footer')
