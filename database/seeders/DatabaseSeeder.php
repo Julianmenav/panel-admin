@@ -55,6 +55,6 @@ class DatabaseSeeder extends Seeder
         ]);
 
         // Seed Events(calendar) table
-        Event::factory(15)->create();
+        Event::factory(10)->create();
     }
 }
