@@ -18,15 +18,12 @@ class EventFactory extends Factory
      */
     public function definition()
     {
-        $random_date = fake()->dateTimeBetween('-1 week', '+2 week');
-
-        $minutes = rand(10,60);
-        $random_duration = new DateInterval("PT{$minutes}M");
+        $random_date = fake()->dateTimeBetween('-1 week', '+1 week');
 
         return [
             'start_datetime' => $random_date,
-            'end_datetime' => $random_date->add($random_duration),
-            'title' => fake()->sentence(4),
+            'end_datetime' => $random_date->add(new DateInterval("PT30M")),
+            'title' => fake()->sentence(2, false),
             'event_type_id' => EventType::all()->random()->id()
 
         ];
