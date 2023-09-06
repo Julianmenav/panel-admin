@@ -95,12 +95,19 @@
 @section('js')
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function()  
+
             $.ajaxSetup({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 }
             });
+
+            /**
+             * 
+             * 
+             * Creacion de eventos en el calendario a traves de los datos pasados por el controlador
+            */
             
             let calendarEvents = [
                 @foreach ($events as $event)
@@ -120,6 +127,13 @@
             ];
             
             let calendarEl = document.getElementById('calendar');
+
+            /**
+             * 
+             * 
+             * Configuracion del calendario
+             * Contiene funciones para crear/editar eventos en el calendario haciendo click en el
+            */            
 
             let calendar = new FullCalendar.Calendar(calendarEl, {
                 lang: 'es',
@@ -169,6 +183,14 @@
 
             calendar.render();
 
+
+            /**
+             * 
+             * 
+             * Manejadores de botones de editar y crear
+            */  
+
+
             $('#edit-btn').on('click', function(e) {
                 e.preventDefault(); 
             
@@ -209,6 +231,12 @@
                 });
             });
         });
+
+        /**
+         * 
+         * 
+         * Permite transformar de formato Date a una string 'YYYY/MM/DD HH:mm'
+        */          
 
         function formatDate(date) {
             const year = date.getFullYear();

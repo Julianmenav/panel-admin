@@ -102,6 +102,11 @@
                 }
             });
 
+            /**
+             * 
+             * 
+             * Manejadores de los botones para editar y borrar
+            */  
             
             $(".edit-user-btn").click(function () {
                 const userId = $(this).data("user-id")

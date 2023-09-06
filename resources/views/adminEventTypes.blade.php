@@ -153,6 +153,13 @@
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 }
             });
+
+            /**
+             * 
+             * 
+             * Manejadores de los botones para editar y borrar
+            */  
+           
             
             $(".edit-type-btn").click(function () {
                 const typeId = $(this).data("type-id")
