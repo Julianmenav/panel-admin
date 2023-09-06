@@ -52,6 +52,9 @@
                                <strong>Contraseña</strong>: admin123
                             </li>
                         </ul>
+                        <div class="flex justify-center pt-6 font-bold text-zinc-900">
+                            <a class="underline" href="/admin">Ir a Panel del Administrador</a>
+                        </div>
                     </div>
                 </div>
             </div>
